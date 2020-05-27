@@ -1,0 +1,4 @@
+[org.gnome.desktop.background]
+picture-uri='file:///usr/local/share/backgrounds/ghostbsd/Arizona_Desert_Monument.jpg'
+picture-options='stretched'
+show-desktop-icons=true
