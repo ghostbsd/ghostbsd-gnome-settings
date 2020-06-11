@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Gnome Settings Daemon Background Helper
+Comment=Sets the user background in AccountsService on Gnome
+Exec=gsd-background-helper
+OnlyShowIn=X-Gnome;
+X-Gnome-Autostart-enabled=true
+
