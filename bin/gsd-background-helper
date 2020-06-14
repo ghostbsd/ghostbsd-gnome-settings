@@ -8,13 +8,7 @@
 # in /var/lib/AccountsService/users/$USER
 
 function setuserbackground(){
-	export USERBACKGROUND=`gsettings get org.gnome.desktop.background picture-filename | sed -e "s/^'//" -e "s/'$//"`
-
-	dbus-send --system --print-reply \
-	--dest=org.freedesktop.Accounts \
-	--type=method_call \
-	/org/freedesktop/Accounts/User`id -u` \
-	org.freedesktop.Accounts.User.SetBackgroundFile string:"$USERBACKGROUND"
+	export USERBACKGROUND=`gsettings get org.gnome.desktop.background picture-uri | sed -e "s/^'//" -e "s/'//" -e "s@file://@@"`
 
 	dbus-send --system --print-reply \
 	--dest=org.freedesktop.Accounts \
